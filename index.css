@@ -1,0 +1,93 @@
+:root {
+  --color-bg: #3f51b5;
+  --color-success: #4caf50;
+  --color-failure: #f44336;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+header > div > * + * {
+  margin-left: 1em;
+}
+
+select,
+button {
+  border-style: none;
+  padding: 1em;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background-color: #fff;
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid:not(:empty) {
+  border: 1px solid #fff;
+}
+
+.grid.easy {
+  max-width: 489px;
+}
+
+.grid.medium {
+  max-width: 440px;
+}
+
+.grid.hard {
+  max-width: 342px;
+}
+
+.cell {
+  max-width: 48px;
+  max-height: 48px;
+  background-color: var(--color-bg);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.grid.easy .cell {
+  flex-basis: 10vw;
+  height: 10vw;
+}
+
+.grid.medium .cell {
+  flex-basis: 11.11111111vw;
+  height: 11.11111111vw;
+}
+
+.grid.hard .cell {
+  flex-basis: 14.28571429vw;
+  height: 14.28571429vw;
+}
+
+.cell.clicked {
+  background-color: var(--color-success);
+}
+
+.cell.clicked.bomb {
+  background-color: var(--color-failure);
+}

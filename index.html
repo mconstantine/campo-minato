@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campo minato</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <p>Score: <span id="score">0</span></p>
+      <div>
+        <label for="level">Level</label>
+        <select name="level" id="level">
+          <option value="EASY">Easy</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HARD">Hard</option>
+        </select>
+        <button id="play">Play</button>
+      </div>
+    </header>
+    <main>
+      <div id="grid" class="grid"></div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
